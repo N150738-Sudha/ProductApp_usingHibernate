@@ -1,0 +1,86 @@
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<title>Insert title here</title>
+	<script type="text/javascript" src="js/validateSignUpForm.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body background-color="lime" text="black">
+	<h2 text-align ="center">New Customer ? Register here </h2>
+	<div id = "show"></div>
+	<!-- onsubmit="validate3()"  -->
+	<form   id = "myForm" action="AuthenticateUser" onsubmit="return validate()">
+		<table cellpadding="10" cellspacing="10">
+			<tr>
+				<td>User name </td>
+				<td><input type="text" name="username" id="username" /></td>
+			</tr>
+			<tr>
+				<td>Password </td>
+				<td><input type="password" name="password" id="password" /></td>
+			</tr>
+			<tr>
+				<td>Confirm Password </td>
+				<td><input type="password" name="confirmpassword" id="confirmpassword" /></td>
+			</tr>
+			<tr>
+				<td>Email </td>
+				<td><input type="email" name="emailid" id="emailid" /></td>
+			</tr>
+			<tr>
+				<td>Mobile </td>
+				<td><input type="text" name="mobile" id="mobile" /></td>
+			</tr>
+
+			<tr>
+				<td>Gender </td>
+				<td>
+					<input type="radio" name="gender" id="male" value="male" />Male
+					<input type="radio" name="gender" id="female" value="female" />Female
+					<input type="radio" name="gender" id="others" value="others" />Others
+				</td>
+			</tr>
+
+			<tr>
+				<td>Notifications : </td>
+				<td>
+					<input type="checkbox" name="notification" id="notification1" value="call" />Call
+					<input type="checkbox" name="notification" id="notification2" value="email" />Email
+					<input type="checkbox" name="notification" id="notification3" value="sms" />SMS
+				</td>
+			</tr>
+
+			<tr>
+				<td>Payment Options : </td>
+				<td>
+					<select name="paymentOptions" id="paymentOptions">
+						<option>UPI</option>
+						<option>Credit/Debit Card</option>
+						<option selected="selected">Netbanking</option>
+						<option>COD</option>
+					</select>
+				</td>
+			</tr>
+
+
+			<tr>
+				<td><input type="submit" value="SignUp" > </td>
+				<td><input type="reset" value="Clear"></td>
+			</tr>
+
+		</table>
+	</form>
+
+	<p id="result"></p>
+	<h6><a href="home.html">HOME</a></h6>
+
+
+</body>
+
+</html>

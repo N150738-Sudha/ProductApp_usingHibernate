@@ -1,0 +1,19 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+<class name = "com.revature.pms.model.Product" table = "new_products">
+
+<id name = "productId" type = "int" column = "productid">
+<generator class="increment"/>
+</id>
+
+<property name = "productName" type = "string"/>
+<property name = "quantityOnHand" type = "int"/>
+<property name = "price" column = "price" type = "int"/>
+<property name = "comments" column = "comments" type = "string"/>
+
+</class>
+</hibernate-mapping>

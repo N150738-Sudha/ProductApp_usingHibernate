@@ -1,0 +1,75 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+<link type="text/css" rel="stylesheet" href="css/styles.css"/>
+<script type="text/javascript">
+function validate(){
+	var productId = document.getElementById("productId").value;
+	var productName = document.getElementById("productName").value;
+	var quantityOnHand = document.getElementById("quantityOnHand").value;
+	var price = document.getElementById("price").value;
+	if(productId.length == 0){
+		errorProductId.innerText="Please enter productId"
+		return false;
+	}
+	else if(productName.length == 0){
+		errorProductName.innerHTML="Please enter product name"
+		return false;
+	}
+	else if(quantityOnHand.length == 0){
+		errorQuantityOnHand.innerHTML="Please enter quantity on hand"
+		return false;
+	}
+	else if(price.length == 0){
+		errorPrice.innerHTML="<i><u>Please enter price"
+		return false;
+	}
+	else{
+		alert("Success")
+	}
+	
+}
+</script>
+</head>
+<body bgcolor="lime" text="black">
+	<h2 align="center">Product Form</h2>
+	<form action="ProductController" onsubmit="return validate()">
+		<table cellpadding="10" cellspacing="10">
+			<tr>
+				<td>Product Id</td>
+				<td><input type="number" name="productId" id="productId" /></td>
+				<td><font color="red"><div id="errorProductId"></div></font></td>
+			</tr>
+			<tr>
+				<td>Product Name</td>
+				<td><input type="text" name="productName" id="productName" /></td>
+				<td><font color="red"><div id="errorProductName"></div></font></td>
+			</tr>
+
+			<tr>
+				<td>QunatityOnHand</td>
+				<td><input type="number" name="quantityOnHand" id="quantityOnHand" /></td>
+				<td><font color="red"><div id="errorQuantityOnHand"></div></font></td>
+			</tr>
+			<tr>
+				<td>Price</td>
+				<td><input type="number" name="price" id="price" /></td>
+				<td><font color="red"><div id="errorPrice"></div></font></td>
+			<tr><td>Comments : </td><td>
+					<select name="comments" id="comments">
+					<option selected="selected">select</option>
+							<option>Excellent</option>
+							<option>Better</option>
+							<option>Good</option>
+							<option>Bad</option>
+					</select>
+			</td></tr>
+			<tr><td><input type="submit" value="SignUp"> </td><td><input type="reset" value="Clear"></td></tr>
+
+
+		</table>
+	</form>
+<a href="Home.html">Home</a>
+</body>
+</html>
