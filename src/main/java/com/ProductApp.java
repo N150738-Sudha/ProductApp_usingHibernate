@@ -25,7 +25,7 @@ public class ProductApp {
 		System.out.println("Please enter your name :");
 		String username = sc.next();
 		
-		logger.info("Welcome, "+username+" you logged in at:"+new Date());
+		logger.info("Welcome "+username+", you logged in at:"+new Date());
 		System.out.println("Welcome, "+username);
 
 		while (true) {
